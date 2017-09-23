@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `Cuentenos` (
+	`id`	INTEGER NOT NULL UNIQUE,
+	`cuidad`	TEXT NOT NULL,
+	`nombre`	TEXT NOT NULL,
+	`telefono`	TEXT NOT NULL,
+	`direccion`	TEXT NOT NULL,
+	`tipo`	TEXT NOT NULL,
+	PRIMARY KEY(`id`)
+);

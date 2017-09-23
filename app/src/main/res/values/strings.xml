@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Database</string>
+    <string name="restaurantes">Restaurantes</string>
+    <string name="Bares">Bares</string>
+    <string name="hospitales">Hospitales</string>
+    <string name="hoteles">Hoteles</string>
+    <string name="universidad">Universidades</string>
+    <string name="barberias">Barberías</string>
+    <string name="Supermercados">Supermercados</string>
+    <string name="veterinarias">Veterinarias</string>
+    <string name="Compras">Compras</string>
+    <string name="cines">Cines</string>
+</resources>
