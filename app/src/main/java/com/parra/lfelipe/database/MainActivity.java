@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
     private LinearLayout llRestaurantes, llHospitales, llBarberias, llBares, llUniversidades, llVeterinarias, llCompras, llCines, llHoteles;
+    private ListView listview;
     private String consulta = "";
 
 
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         llCompras = (LinearLayout) findViewById(R.id.llCompras);
         llCines = (LinearLayout) findViewById(R.id.llCine);
         llHoteles = (LinearLayout) findViewById(R.id.llHoteles);
+
     }
 
     public void listarLugares(View view) {

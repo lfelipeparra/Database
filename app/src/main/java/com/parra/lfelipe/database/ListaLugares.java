@@ -1,12 +1,15 @@
 package com.parra.lfelipe.database;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -19,6 +22,7 @@ public class ListaLugares extends AppCompatActivity {
     private List<objLugar> lugares;
     private List<String> nombres;
     private ListView listview;
+    private int posConsulta;
 
     public static final String TABLE_NAME = "Cuentenos";
     public static final String COLUMN_NAME_ID = "id";
@@ -119,5 +123,20 @@ public class ListaLugares extends AppCompatActivity {
         cursor.close();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,nombres);
         listview.setAdapter(adapter);
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String nombre = lugares.get(i).nombre;
+                String cuidad = lugares.get(i).cuidad;
+                String telefono = lugares.get(i).telefono;
+                String direccion = lugares.get(i).direccion;
+                Intent intent = new Intent(ListaLugares.this,infoLugar.class);
+                intent.putExtra("nombre",nombre);
+                intent.putExtra("cuidad",cuidad);
+                intent.putExtra("telefono",telefono);
+                intent.putExtra("direccion",direccion);
+                startActivity(intent);
+            }
+        });
     }
 }
