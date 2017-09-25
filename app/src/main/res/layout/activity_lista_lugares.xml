@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.parra.lfelipe.database.ListaLugares">
+    tools:context="com.parra.lfelipe.database.ListaLugares"
+    android:orientation="vertical">
 
-    <ListView
+
+    <ExpandableListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/listView">
-    </ListView>
+    </ExpandableListView>
 
 </LinearLayout>
